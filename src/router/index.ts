@@ -1,9 +1,16 @@
 import { createWebHistory, createRouter, RouteRecordRaw } from "vue-router";
+import { BaseLayout } from "@/layout";
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () => import('@/components/HelloWorld.vue')
+    component: BaseLayout,
+    children: [
+      {
+        path: 'home',
+        component: () => import('@/view/home')
+      }
+    ]
   }
 ]
 
