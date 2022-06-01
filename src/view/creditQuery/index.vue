@@ -1,7 +1,7 @@
 <template>
   <div class='home'>
     <span>{{ count }}</span>
-    <el-button type="primary" @click="count += 1">jwjwjwjwjj</el-button>
+    <el-button type="primary" @click="count += 1">2222222</el-button>
   </div>
 </template>
 

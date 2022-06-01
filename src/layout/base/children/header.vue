@@ -1,11 +1,21 @@
 <template>
   <div class='header'>
-    头部
+    <Hamburger></Hamburger>
+    <span @click="handleCollapseChange">头部</span>
   </div>
 </template>
 
 <script lang='ts' setup name="header">
+import { collapseStatus, handleCollapseChange } from '@/hooks/useCollapse';
 </script>
 
-<style lang='less' scoped>
+<style lang='scss' scoped>
+.header {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #eaeaea;
+}
 </style>

@@ -1,6 +1,7 @@
 <script lang="tsx">
 import { menu, Menu } from "@/config/menu";
-// import { collapseStatus } from "@/hooks/collapse";
+import { collapseStatus } from "@/hooks/useCollapse";
+import { tempAsideStyle } from "@/config";
 export default defineComponent({
   setup() {
     const baseMenuItem = (props: Menu) => {
@@ -30,14 +31,13 @@ export default defineComponent({
     };
 
     const router = useRoute();
-    const defaultActivePath = ref("");
-    setTimeout(() => {
-      defaultActivePath.value = router.path;
-    }, 500);
+    const defaultActivePath = computed(() => {
+      return router.path
+    });
 
     return () => {
       return (
-        <el-menu router default-active={defaultActivePath.value} collapse={true} collapse-transition class="el-menu-vertical-demo">
+        <el-menu router default-active={defaultActivePath.value} show-timeout={280} hidden-timeout={280} collapse={collapseStatus.value} collapse-transition class="el-menu-vertical-demo" {...tempAsideStyle}>
           {createItem(menu)}
         </el-menu>
       );
@@ -46,5 +46,8 @@ export default defineComponent({
 });
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
+.el-menu {
+  border-right: none;
+}
 </style>

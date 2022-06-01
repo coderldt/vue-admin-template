@@ -5,10 +5,15 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: BaseLayout,
+    redirect: '/home',
     children: [
       {
         path: 'home',
         component: () => import('@/view/home')
+      },
+      {
+        path: 'creditQuery',
+        component: () => import('@/view/creditQuery')
       }
     ]
   }
