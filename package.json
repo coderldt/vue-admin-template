@@ -8,8 +8,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@element-plus/icons": "^0.0.11",
-    "scss": "^1.52.1",
+    "@element-plus/icons-vue": "^2.0.1",
+    "axios": "^0.27.2",
+    "sass": "^1.52.1",
+    "scss": "^0.2.4",
     "vue": "^3.2.25",
     "vue-router": "^4.0.15"
   },

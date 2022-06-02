@@ -37,7 +37,7 @@ export default defineComponent({
 
     return () => {
       return (
-        <el-menu router default-active={defaultActivePath.value} show-timeout={280} hidden-timeout={280} collapse={collapseStatus.value} collapse-transition class="el-menu-vertical-demo" {...tempAsideStyle}>
+        <el-menu router default-active={defaultActivePath.value} collapse={collapseStatus.value} collapse-transition class="el-menu-vertical-demo" {...tempAsideStyle}>
           {createItem(menu)}
         </el-menu>
       );

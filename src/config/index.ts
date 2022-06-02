@@ -1,5 +1,5 @@
 const config = {
-  projectName: 'coder'
+  projectName: '你的后台'
 }
 
 const tempAsideStyle = {

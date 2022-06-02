@@ -1,7 +1,7 @@
 <template>
   <div class='logo' :style="tempAsideStyle">
     <img :src="Logo" alt="" :style="getImgStyle">
-    <span v-if="!collapseStatus">
+    <span class="projectName" v-show="!collapseStatus">
       {{ config.projectName }}
     </span>
   </div>
@@ -14,8 +14,7 @@ import { collapseStatus } from "@/hooks/useCollapse";
 
 const getImgStyle = computed(() => {
   return {
-    height: '35px',
-    'margin-right': collapseStatus.value ? '0' : '10px'
+    'margin': collapseStatus.value ? '0' : '0 20px 0 10px'
   }
 })
 
@@ -27,9 +26,19 @@ const getImgStyle = computed(() => {
   align-items: center;
   justify-content: center;
   padding: 0 15px;
-  box-sizing: content-box;
+  box-sizing: border-box;
+  height: 60px;
   color: #fff;
   transition: width .28s;
+
+  img {
+    height: 30px;
+    line-height: 60px;
+  }
+
+  .projectName {
+    white-space: nowrap;
+  }
 
   span {
     flex: 1;

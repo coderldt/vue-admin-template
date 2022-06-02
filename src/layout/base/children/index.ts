@@ -1,4 +1,4 @@
 import Header from "./header.vue";
-import Aside from "./aside.vue";
+import Logo from "./logo.vue";
 
-export { Aside, Header }
+export { Header, Logo }

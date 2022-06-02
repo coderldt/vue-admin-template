@@ -15,7 +15,6 @@ import { collapseStatus, handleCollapseChange } from '@/hooks/useCollapse';
   align-items: center;
   height: inherit;
   box-sizing: border-box;
-  padding: 10px;
-  background-color: #eaeaea;
+  box-shadow: 0 1px 4px rgb(0 21 41 / 8%);
 }
 </style>
